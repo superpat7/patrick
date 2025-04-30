@@ -13,14 +13,55 @@
         <nav>
             <h1 class="logo">Aqua Betta</h1>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <a href="javascript:void(0);" onclick="openModal()">
+                    <button>Home</button>
+                  </a>
+
+                    <div id="bettaModal" class="modal">
+                        <div class="modal-content">
+                          <span class="close" onclick="closeModal()">&times;</span>
+                          <h2>Introduction to Betta Fish</h2>
+                          <p>Betta fish, also known as Siamese fighting fish, are vibrant freshwater fish native to Southeast Asia...</p>
+                          <h3>Types of Betta Fish</h3>
+                          <ul>
+                            <li><strong>Veil Tail</strong> – Traditional long, flowing tail.</li>
+                            <li><strong>Halfmoon</strong> – Tail spreads 180°, resembling a half circle.</li>
+                            <li><strong>Crowntail</strong> – Tail rays extend outward, giving a spiky appearance.</li>
+                            <li><strong>Plakat</strong> – Short-finned, resembling wild-type bettas.</li>
+                            <li><strong>Delta</strong> – Tail shaped like the Greek letter Δ.</li>
+                            <li><strong>Super Delta</strong> – Tail angle slightly greater than Delta.</li>
+                            <li><strong>Double Tail</strong> – Two caudal fins instead of one.</li>
+                          </ul>
+                          <h3>Color Patterns</h3>
+                          <ul>
+                            <li><strong>Solid</strong> – One uniform color.</li>
+                            <li><strong>Butterfly</strong> – Solid body with lighter-colored fins.</li>
+                            <li><strong>Dragon Scale</strong> – Metallic sheen with scale-like patterns.</li>
+                          </ul>
+                          <h3>Care Tips</h3>
+                          <ul>
+                            <li>Maintain water temperature between 76°F and 81°F.</li>
+                            <li>Provide a tank with a lid to prevent jumping.</li>
+                            <li>Feed a balanced diet of high-quality pellets and occasional live food.</li>
+                            <li>Avoid keeping multiple males together to prevent aggression.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    
+                  </a>                
+                <li> <a href="#" onclick="openModal()">
+                    <button>About</button>
+                  </a> </li>
+                <li><a href="#" onclick="openModal()">
+                    <button>Service</button>
+                  </a> </a></li>
+                <li><a href="#" onclick="openModal()">
+                    <button>Contact</button>
+                  </a> </a></li>
             </ul>
         </nav>
     </header>
-
+    
     <section class="hero">
         <div class="hero-content">
             <h2>Aqua Betta: Nature's Living Art</h2>
@@ -29,16 +70,47 @@
         </div>
     </section>
 
+    <script>
+        // Get the modal
+        var modal = document.getElementById("bettaModal");
+      
+        // Get the button that opens the modal
+        var btn = document.querySelector("a[onclick='openModal()']");
+      
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+      
+        // When the user clicks on the button, open the modal
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+      
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+      
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      </script>
+      
+      </script>
+
     <section class="about">
         <h2>About Us</h2>
 
         <p>We help you find the best fish to keep at your comfort. Join us on this adventure!</p>
-    </section>
+    </section>  
 
     <footer>
         <p>©2025 pajayonpatrick. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
+    
 </body>
 </html>
